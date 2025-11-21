@@ -1,0 +1,22 @@
+name: Python Example
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    container:
+      image: python:3.10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Run a Python script
+        run: |
+          python --version
+          python -c "print('Hello from Python in a GitHub Actions container!')"
+          python script.py
