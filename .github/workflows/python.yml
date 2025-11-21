@@ -18,5 +18,5 @@ jobs:
       - name: Run a Python script
         run: |
           python --version
-          python -c "print('Hello from Python in a GitHub Actions container!')"
+          python -c "print('Hello from Python in a GitHub Actions container!')" > script.py
           python script.py
